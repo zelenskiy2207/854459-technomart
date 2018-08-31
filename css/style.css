@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-
+  min-width: 960px;
   color: #000000;
   font-size: 18px;
   line-height: 20px;
@@ -28,7 +28,6 @@ ul.listnone {
 }
 
 .button {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -47,10 +46,11 @@ ul.listnone {
 
 .heading {
   background-color: #f9f5f0;
+  min-height: 89px;
+  margin-bottom: 20px;
 }
 
 .heading h2 {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   color: #32425c;
@@ -59,14 +59,29 @@ ul.listnone {
 
 .main-header {
   background-color: #f3f7f9;
+  min-height: 260px;
+  padding-bottom: 60px;
+  margin-bottom: 60px;
+}
+
+.main-header-inner {
+  margin-bottom: 23px;
 }
 
 .top-navigation-row {
   background-color: #293449;
 }
 
+.top-navigation-row .container {
+  display: flex;
+}
+
 .technomart-logo {
   background-color: #ee3643;
+  width: 220px;
+  height: 42px;
+  box-shadow: 0 5px 0 0 #b52933;
+  text-align: center;
 }
 
 .technomart-logo:hover,
@@ -78,13 +93,23 @@ ul.listnone {
   background-color: #ba2732;
 }
 
-.top-navigation-row .technomart-logo img {
+.technomart-logo img {
   width: 111px;
   height: 18px;
+  padding-top: 10px;
+}
+
+.search input {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.cart-navigation {
+  display: flex;
+  margin: 0;
 }
 
 .cart-navigation a {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   color: #ffffff;
@@ -117,8 +142,17 @@ a.make-order-link:active {
   background-color: #608f46;
 }
 
+.navigation-container {
+  width: 940px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.navigation-container p {
+  margin: 0;
+}
+
 .site-description {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 23px;
   font-style: italic;
@@ -126,22 +160,24 @@ a.make-order-link:active {
 }
 
 .header-contacts .header-contacts-phone {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
 }
 
 .header-contacts .header-contacts-address {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
   color: #32425c;
 }
 
+.navigation-container {
+  display: flex;
+  min-height: 160px;
+}
+
 .user-navigation .login-link a,
 .user-navigation .profile-link a {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -159,7 +195,6 @@ a.make-order-link:active {
 }
 
 .user-navigation .subprofile-link a {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   text-decoration: underline;
@@ -176,12 +211,13 @@ a.make-order-link:active {
 }
 
 .site-navigation {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 17px;
   color: #ffffff;
-
+  display: flex;
+  flex-wrap: wrap;
   background-color: #32425c;
+  min-height: 55px;
 }
 
 .site-navigation a {
@@ -208,7 +244,7 @@ a.make-order-link:active {
 }
 
 h1.site-header {
-  font-family: "Cuprum", Arial, sans-serif;
+  margin: 0;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -216,17 +252,30 @@ h1.site-header {
 }
 
 h1.page-header {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: #32425c;
-
+  padding-left: 30px;
+  padding-top: 32px;
+  margin: 0;
   background-color: #f2f6f8;
+  min-height: 57px;
+  margin-bottom: 20px;
+}
+
+.promo-catalog {
+  margin-bottom: 54px;
 }
 
 .slide { /* временный стиль, чтобы видно было область и белый текст */
-  background-color: rgba(206, 231, 244, 0.7);
+  /*background-color: rgba(206, 231, 244, 0.7);*/
+  height: 266px;
+  width: 620px;
+}
+
+.promo-catalog-slider figure {
+  margin: 0;
 }
 
 .slider-image img {
@@ -234,8 +283,45 @@ h1.page-header {
   height: 266px;
 }
 
+.promo-catalog-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 411px;
+}
+
+.promo-catalog-list .flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.promo-catalog-list .flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.promo-catalog-list p {
+  margin: 0;
+}
+
+/* временные стили */
+.slider-controls,
+.slider-text-heading,
+.slider-text-content,
+.slider-link {
+  display: none;
+}
+
+.slide-1 {
+  display: none;
+}
+/* */
+
 .promo-catalog-slider .slider-text-heading {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 700;
@@ -243,14 +329,11 @@ h1.page-header {
 }
 
 .promo-catalog-slider .slider-text-content {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
   line-height: 24px;
   color: #ffffff;
 }
 
 .promo-catalog-heading {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -259,7 +342,6 @@ h1.page-header {
 }
 
 .promo-catalog-link {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -273,6 +355,11 @@ h1.page-header {
 
 .promo-catalog-link:active {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.promo-catalog-item {
+  width: 300px;
+  min-height: 123px;
 }
 
 .promo-catalog-item.materials {
@@ -295,11 +382,25 @@ h1.page-header {
   background-color: #ffc047;
 }
 
+.catalog-list {
+  padding: 0;
+  display: flex;
+  min-height: 318px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+.catalog-item {
+  width: 226px;
+}
+
+.catalog-item-actions {
+  display: none;
+}
+
 .catalog-item .catalog-item-title {
   font-family: "PT Sans", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  color: #000000;
   font-weight: 700;
 }
 
@@ -326,6 +427,15 @@ h1.page-header {
   height: 164px;
 }
 
+.brands-list {
+  padding: 0;
+  display: flex;
+  min-height: 310px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 88px;
+}
+
 .brands-item {
   background-color: #ffffff;
 }
@@ -345,15 +455,39 @@ h1.page-header {
 }
 
 .services h2,
-.contacts h2 {
-  font-family: "Cuprum", Arial, sans-serif;
+.map-contacts h2 {
+  margin: 0;
   font-size: 30px;
   line-height: 30px;
   color: #000000;
+  text-transform: uppercase;
 }
 
 .services {
   background-color: #f4f8f9;
+}
+
+.services-list {
+  width: 240px;
+  margin-right: 80px;
+}
+
+.services .container {
+  padding-top: 69px;
+  min-height: 453px;
+}
+
+.services-wrapper {
+  margin-top: 76px;
+  display: flex;
+}
+
+.service {
+  display: none;
+}
+
+.service-delievery {
+  display: block;
 }
 
 .services .services-about,
@@ -365,7 +499,6 @@ h1.page-header {
 }
 
 .services li a {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 21px;
   line-height: 30px;
   font-weight: 700;
@@ -383,10 +516,10 @@ h1.page-header {
 }
 
 .services h3 {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
+  text-transform: uppercase;
 }
 
 .services .services-description-text {
@@ -397,12 +530,26 @@ h1.page-header {
 }
 
 .services .get-credit-button {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
   text-transform: uppercase;
   background-color: #ff5357;
+}
+
+.company-and-delievery-container {
+  display: flex;
+  min-height: 538px;
+  padding-top: 100px;
+}
+
+.about-company, .map-contacts {
+  padding-top: 80px;
+}
+
+.about-company {
+  width: 540px;
+  margin-right: 100px;
 }
 
 .about-company .about-company-text {
@@ -412,31 +559,61 @@ h1.page-header {
   color: #000000;
 }
 
-.delievery-list li {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  color: #000000;
+.footer-navigation-wrapper {
+  background-color: #32425c;
+  min-height: 193px;
+}
+
+.footer-contacts-wrapper {
+  background-color: #293449;
+  padding: 35px 0;
 }
 
 .footer-navigation {
-  background-color: #32425c;
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  flex-wrap: wrap;
 }
 
-.footer-contacts {
-  background-color: #293449;
+.footer-navigation .technomart-logo {
+  width: 220px;
+  min-height: 63px;
+}
+
+.contacts-wrapper {
+  padding-top: 32px;
+}
+
+.contacts-wrapper .contacts {
+  margin: 0;
 }
 
 .footer-navigation .technomart-logo img {
   width: 138px;
   height: 21px;
+  padding-top: 22px;
+}
+
+.footer-navigation-list {
+  display: flex;
+  min-width: 550px;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-navigation a {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
   line-height: 24px;
   color: #f3f7f9;
+}
+
+.footer-catalog-navigation-list {
+  margin: 0;
+  display: flex;
+  min-width: 530px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 32px;
 }
 
 .footer-catalog-navigation-list a {
@@ -453,21 +630,31 @@ h1.page-header {
 }
 
 .footer-navigation .contacts {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
   line-height: 24px;
   color: #f3f7f9;
 }
 
+.footer-contacts {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.copyrights,
+.social-links,
+.contact {
+  margin: 0;
+  padding: 0;
+}
+
 .copyrights li {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
 }
 
 .contact {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
@@ -485,6 +672,10 @@ h1.page-header {
 .contact a:active {
   text-decoration: none;
   color: #ee3643;
+}
+
+.social-links {
+  display: flex;
 }
 
 .social-links a {
@@ -513,10 +704,36 @@ h1.page-header {
 }
 
 .write-us-form label {
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 18px;
   line-height: 18px;
-  color: #000000;
+}
+
+.inner-page-heading {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 38px;
+}
+
+.inner-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.filters {
+  width: 220px;
+}
+
+.inner-page-content {
+  width: 700px;
 }
 
 .filters h2 {
@@ -526,6 +743,8 @@ h1.page-header {
   color: #000000;
   text-transform: uppercase;
   background-color: #f7f3ec;
+  margin: 0;
+  padding: 13px 19px 12px 13px;
 }
 
 .filter-form {
@@ -555,6 +774,19 @@ h1.page-header {
 
 .sort {
   background-color: #f7f3ec;
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.sort h2 {
+  margin: 0;
+  padding: 13px 19px 12px 13px;
+}
+
+.sort-list,
+.sort-order-list {
+  display: flex;
+  margin: 0;
 }
 
 .sort h2 {
@@ -587,7 +819,6 @@ h1.page-header {
 
 .catalog-button {
   background-color: #63a63e;
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   color: #ffffff;
@@ -598,6 +829,11 @@ h1.page-header {
 .catalog-item-bookmark {
   color: #32425c;
   background: #ffffff;
+}
+
+.pagination-list {
+  display: flex;
+  margin: 53px 0 60px 0;
 }
 
 .pagination-item a {
@@ -613,16 +849,19 @@ h1.page-header {
   background-color: #ee3643;
 }
 
-.some-words-about {
+.article-wrapper {
   background-color: #f2f6f8;
+  padding-top: 65px;
+  padding-bottom: 68px;
 }
 
+
 .some-words-about h2 {
-  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .some-words-about p {
@@ -634,20 +873,44 @@ h1.page-header {
 
 .modal {
   background-color: #ffffff;
+  display: none;
 }
 
 .modal-footer {
   background-color: #f1f1f1;
+  min-height: 110px;
 }
 
 .modal-text-success {
-  font-family: "Cuprum", Arial, sans-serif;
+  margin: 0;
   font-size: 30px;
   line-height: 30px;
   color: #000000;
+  padding: 68px 100px 73px 176px;
 }
 
 .modal-map img {
   width: 1736px;
   height: 779px;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.modal-added-to-cart {
+  width: 620px;
+  min-height: 275px;
+}
+
+.modal-write-us {
+  width: 620px;
+  min-height: 314px;
+  padding: 45px 80px 39px 80px;
+}
+
+.modal-body {
+  padding: 45px 80px 39px 80px;
 }
