@@ -18,20 +18,12 @@
             <img src="img/logo.svg" width="111" height="18" alt="Логотип компании «Техномарт»" aria-label="Логотип компании «Техномарт»">
           </a>
           <form class="search" method="get" action="https://echo.htmlacademy.ru" aria-label="Форма поиска">
-            <label for="search-input" class="visually-hidden">Строка поиска</label>
+            <label for="search-input" class="search-label visually-hidden">Строка поиска</label>
             <input id="search-input" type="text" name="search" placeholder="Поиск:">
           </form>
-          <ul class="cart-navigation listnone" aria-label="Навигация по корзине">
-            <li class="cart-navigation-bookmarks">
-              <a href="#" class="bookmarks-link">Закладки: 0</a>
-            </li>
-            <li class="cart-navigation-cart">
-              <a href="#" class="cart-link filled">Корзина: 10</a>
-            </li>
-            <li class="cart-navigation-order">
-              <a href="#" class="make-order-link">Оформить заказ</a>
-            </li>
-          </ul>
+          <a href="#" class="cart-navigation bookmarks-link">Закладки: 0</a>
+          <a href="#" class="cart-navigation cart-link filled">Корзина: 10</a>
+          <a href="#" class="cart-navigation make-order-link">Оформить заказ</a>
         </div>
       </div>
 
@@ -43,23 +35,20 @@
           <span class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </p>
 
-        <ul class="user-navigation listnone" aria-label="Навигация аккаунта">
+        <ul class="user-navigation user-navigation-inner listnone" aria-label="Навигация аккаунта">
           <li class="profile-link">
-            <a href="#" aria-label="Ваше имя">Равшан Джамшутович</a>
+            <p class="user-navigation-btn profile-btn">
+              <a href="#" class="profile" aria-label="Ваше имя">Равшан Джамшутович</a>
+              <a href="#" class="logout" aria-label="Выход"></a>
+            </p>
           </li>
-          <li class="logout-link">
-            <a href="#" aria-label="Выход">Выход</a>
-          </li>
-          <li class="subprofile-link">
-            <a href="#">Мои заказы</a>
-          </li>
-          <li class="subprofile-link">
-            <a href="#">Личный кабинет</a>
+          <li class="subprofile-links">
+            <a href="#">Мои заказы</a> <a href="#">Личный кабинет</a>
           </li>
         </ul>
       </div>
 
-      <ul class="site-navigation listnone container" aria-label="Навигация по сайту">
+      <ul class="site-navigation listnone" aria-label="Навигация по сайту">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Компания</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -77,10 +66,10 @@
       <h1 class="page-header">Перфораторы</h1>
 
       <ul class="breadcrumbs listnone" aria-label="">
-        <li><a href="index.html">Главная</a></li>
+        <li><a href="index.html" class="breadcrumbs-home"></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="catalog.html">Инструмент</a></li>
-        <li class="breadcrumbs-current">Перфораторы</li>
+        <li><a>Перфораторы</a></li>
       </ul>
     </div>
 
@@ -88,66 +77,59 @@
       <section class="filters">
         <h2>Фильтр:</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="filter-item">
             <legend>Цена:</legend>
-            <div id="price-custom-range">
-              <button type="button" tabindex="0" id="slider-button-1" aria-label="Выбор минимальной цены"></button>
-              <button type="button" tabindex="0" id="slider-button-2" aria-label="Выбор максимальной цены"></button>
-              <label for="min-price-input" class="visually-hidden">Минимальная цена</label>
-              <input type="text" id="min-price-input" name="min-price" value="0"> -
-              <label for="max-price-input" class="visually-hidden">Максимальная цена</label>
-              <input type="text" id="max-price-input" name="max-price" value="30000">
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label for="min-price-input" class="visually-hidden">Минимальная цена</label>
+                <input type="text" id="min-price-input" name="min-price" value="0"> —
+                <label for="max-price-input" class="visually-hidden">Максимальная цена</label>
+                <input type="text" id="max-price-input" name="max-price" value="30000">
+              </div>
             </div>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-item brands-filter">
             <legend>Производители:</legend>
             <ul class="listnone">
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosh" checked>
-                  Baxter of California
-                </label>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosh" id="bosh" checked>
+                <label for="bosh">Bosch</label>
               </li>
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol">
-                  Интерскол
-                </label>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="interskol">
+                <label for="interskol">Интерскол</label>
               </li>
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" checked>
-                  Makita
-                </label>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="makita" checked>
+                <label for="makita">Makita</label>
               </li>
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt">
-                  Dewalt
-                </label>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="dewalt">
+                <label for="dewalt">Dewalt</label>
               </li>
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi">
-                  Hitachi
-                </label>
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="hitachi">
+                <label for="hitachi">Hitachi</label>
               </li>
             </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-item power-filter">
             <legend>Питание:</legend>
             <ul class="listnone">
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" value="accum" checked>
-                  Аккумуляторные
-                </label>
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" value="accum" id="accum" checked>
+                <label for="accum">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <label>
-                  <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" value="ac">
-                  Сетевые
-                </label>
+                <input class="visually-hidden filter-input filter-input-radio" type="radio" name="power-type" value="ac" id="ac">
+                <label for="ac">Сетевые</label>
               </li>
             </ul>
           </fieldset>

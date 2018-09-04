@@ -18,20 +18,12 @@
             <img src="img/logo.svg" width="111" height="18" alt="Логотип компании «Техномарт»" aria-label="Логотип компании «Техномарт»">
           </a>
           <form class="search" method="get" action="https://echo.htmlacademy.ru" aria-label="Форма поиска">
-              <label for="search-input" class="visually-hidden">Строка поиска</label>
-              <input id="search-input" type="text" name="search" placeholder="Поиск:">
+            <label for="search-input" class="search-label visually-hidden">Строка поиска</label>
+            <input id="search-input" type="text" name="search" placeholder="Поиск:">
           </form>
-          <ul class="cart-navigation listnone" aria-label="Навигация по корзине">
-            <li class="cart-navigation-bookmarks">
-              <a href="#" class="bookmarks-link">Закладки: 0</a>
-            </li>
-            <li class="cart-navigation-cart">
-              <a href="#" class="cart-link">Корзина: 0</a>
-            </li>
-            <li class="cart-navigation-order">
-              <a href="#" class="make-order-link">Оформить заказ</a>
-            </li>
-          </ul>
+          <a href="#" class="cart-navigation bookmarks-link">Закладки: 0</a>
+          <a href="#" class="cart-navigation cart-link">Корзина: 0</a>
+          <a href="#" class="cart-navigation make-order-link">Оформить заказ</a>
         </div>
       </div>
 
@@ -44,15 +36,15 @@
         </p>
         <ul class="user-navigation listnone" aria-label="Навигация авторизации">
           <li class="login-link">
-            <a href="#">Войти</a>
+            <a href="#" class="user-navigation-btn">Войти</a>
           </li>
-          <li class="login-link">
-            <a href="#">Регистрация</a>
+          <li class="registration-link">
+            <a href="#" class="user-navigation-btn">Регистрация</a>
           </li>
         </ul>
       </div>
 
-      <ul class="site-navigation listnone container" aria-label="Навигация по сайту">
+      <ul class="site-navigation listnone" aria-label="Навигация по сайту">
         <li><a>Главная</a></li>
         <li><a href="#">Компания</a></li>
         <li><a href="catalog.html">Каталог</a></li>
@@ -72,7 +64,7 @@
 
         <div class="promo-catalog-list">
           <div class="flex-row">
-            <p class="promo-catalog-item materials">
+            <p class="promo-catalog-item materials new">
               <span class="promo-catalog-heading">Материалы</span>
               <a href="catalog.html" class="promo-catalog-link" aria-label="Материалы на любой вкус">на любой вкус</a>
             </p>
@@ -107,11 +99,16 @@
               </div>
 
               <div class="slider-controls">
-                <button class="slider-button slider-button-back" type="button" aria-label="Назад">Назад</button>
-                <button class="slider-button slider-button-next" type="button" aria-label="Вперед">Вперед</button>
-                <div class="slider-switcher">
-                  <button class="slider-sitcher-button" type="button" aria-label="Перейти на слайд 'Дрели'"></button>
-                  <button class="slider-sitcher-button active" type="button" aria-label="Перейти на слайд 'Перфораторы'"></button>
+                <button class="slider-button slider-button-back visually-hidden" id="slider-button-back" type="button" aria-label="Назад">Назад</button>
+                <label for="slider-button-back" class="slider-button-label slider-button-back-label"></label>
+                <button class="slider-button slider-button-next visually-hidden" id="slider-button-next" type="button" aria-label="Вперед">Вперед</button>
+                <label for="slider-button-next" class="slider-button-label slider-button-next-label"></label>
+
+                <input class="slider-radio-1 visually-hidden" name="slider-switcher" id="slider-switcher-1" type="radio" aria-label="Перейти на слайд 'Дрели'" checked>
+                <input class="slider-radio-2 visually-hidden" name="slider-switcher" id="slider-switcher-2" type="radio" aria-label="Перейти на слайд 'Перфораторы'">
+                <div class="slider-switchers">
+                  <label class="slider-switcher" for="slider-switcher-1"></label>
+                  <label class="slider-switcher" for="slider-switcher-2"></label>
                 </div>
               </div>
             </div>
