@@ -137,6 +137,10 @@
             <p class="catalog-item-image">
               <img src="img/bosh-bfg-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
             </p>
+            <p class="catalog-item-actions">
+              <a class="catalog-item-buy catalog-button" href="#">Купить</a>
+              <a class="catalog-item-bookmark catalog-button" href="#">В закладки</a>
+            </p>
             <p class="catalog-item-title">
               Перфоратор BOSCH BFG 9000
             </p>
@@ -146,6 +150,10 @@
           <li class="catalog-item">
             <p class="catalog-item-image">
               <img src="img/bosh-bfg-3000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+            </p>
+            <p class="catalog-item-actions">
+              <a class="catalog-item-buy catalog-button" href="#">Купить</a>
+              <a class="catalog-item-bookmark catalog-button" href="#">В закладки</a>
             </p>
             <p class="catalog-item-title">
               Перфоратор BOSCH BFG 3000
@@ -157,15 +165,23 @@
             <p class="catalog-item-image">
               <img src="img/bosh-bfg-6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
             </p>
+            <p class="catalog-item-actions">
+              <a class="catalog-item-buy catalog-button" href="#">Купить</a>
+              <a class="catalog-item-bookmark catalog-button" href="#">В закладки</a>
+            </p>
             <p class="catalog-item-title">
               Перфоратор BOSCH BFG 6000
             </p>
             <p class="old-price" aria-label="Старая цена">30500 Р.</p>
             <a class="new-price" href="#" aria-label="Стоимость товара">25500 Р.</a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item new">
             <p class="catalog-item-image">
               <img src="img/bosh-bfg-2000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+            </p>
+            <p class="catalog-item-actions">
+              <a class="catalog-item-buy catalog-button" href="#">Купить</a>
+              <a class="catalog-item-bookmark catalog-button" href="#">В закладки</a>
             </p>
             <p class="catalog-item-title">
               Перфоратор BOSCH BFG 2000
@@ -247,8 +263,8 @@
           <div class="service service-delievery">
             <h3 class="services-description-heading">Доставка</h3>
             <p class="services-description-text">
-              Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!<br>
-              Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+              Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>
+              Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
             </p>
           </div>
           <div class="service service-guarantee">
@@ -266,7 +282,7 @@
               Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.
             </p>
-            <a href="#" class="get-credit-button" aria-label="Отправить заявку на кредит">Отправить заявку</a>
+            <a href="#" class="button get-credit-button" aria-label="Отправить заявку на кредит">Отправить заявку</a>
           </div>
         </div>
       </div>
@@ -282,7 +298,7 @@
           Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
         </p>
         <p class="about-company-text">
-          Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями:
+          Мы можем доставить ваш товар в самые отдаленные точки России!<br> Техномарт работает со многими транспортными компаниями:
         </p>
         <ul class="delievery-list listnone" aria-label="Список транспортных компаний">
           <li>Деловые линии</li>
@@ -295,7 +311,7 @@
       <section class="map-contacts">
         <h2>Контакты</h2>
         <p class="map-description">Вы можете забрать товар сами, заехав в наш офис:</p>
-        <a href="#" aria-label="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        <a href="#" class="map-opener" aria-label="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           <img src="img/map-small.png" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
         </a>
         <a class="write-us button" href="#">Заблудились? Напишите нам!</a>
@@ -385,19 +401,19 @@
       <div class="modal-body">
         <p>
           <label for="user-name">Ваше имя:</label>
-          <input id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input id="user-name" type="text" name="name" class="modal-form-input" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="user-email">Ваш e-mail:</label>
-          <input id="user-email" type="email" name="email" placeholder="email@example.com">
+          <input id="user-email" type="email" name="email" class="modal-form-input" placeholder="email@example.com">
         </p>
         <p>
           <label for="user-message-text">Текст письма:</label>
-          <textarea id="user-message-text" name="message-text" placeholder="В свободной форме"></textarea>
+          <textarea id="user-message-text" name="message-text" class="modal-form-input" placeholder="В свободной форме"></textarea>
         </p>
       </div>
       <div class="modal-footer">
-        <button class="send-message" type="submit">Отправить</button>
+        <button class="send-message button" type="submit">Отправить</button>
       </div>
     </form>
     <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
@@ -409,5 +425,39 @@
     <button class="modal-close" type="button" aria-label="Закрыть окно"></button>
   </section>
 
+  <section class="modal modal-added-to-cart">
+    <h2 class="modal-text-success">Товар добавлен в корзину!</h2>
+    <div class="modal-footer">
+      <a href="#" class="button button-make-order">Оформить заказ</a>
+      <a href="#" class="button button-continue-shopping">Продолжить покупки</a>
+    </div>
+    <button class="modal-close" type="button" aria-label="Закрыть окно">Закрыть</button>
+  </section>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+    // закрываем модалки
+    $('.modal-close').click(function() {
+      $('.modal').removeClass('visible');
+    });
+
+    // открываем карту
+    $('.map-opener').click(function (e) {
+      e.preventDefault();
+      $('.modal-map').addClass('visible');
+    });
+
+    // открываем напишите нам
+    $('.write-us').click(function (e) {
+      e.preventDefault();
+      $('.modal-write-us').addClass('visible');
+    });
+
+    // открываем добавлен в корзину
+    $('.catalog-item-buy').click(function (e) {
+      e.preventDefault();
+      $('.modal-added-to-cart').addClass('visible');
+    });
+  </script>
 </body>
 </html>
