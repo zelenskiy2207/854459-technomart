@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="format-detection" content="telephone=no">
   <title>HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
@@ -30,10 +31,10 @@
       <div class="navigation-container">
         <p class="site-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
 
-        <p class="header-contacts" aria-label="Адрес компании">
-          <span class="header-contacts-phone">+7 (812) 555-05-55</span>
-          <span class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-        </p>
+        <div class="header-contacts" aria-label="Адрес компании">
+          <p class="header-contacts-phone">+7 (812) 555-05-55</p>
+          <p class="header-contacts-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
         <ul class="user-navigation listnone" aria-label="Навигация авторизации">
           <li class="login-link">
             <a href="#" class="user-navigation-btn">Войти</a>
@@ -434,8 +435,8 @@
     <button class="modal-close" type="button" aria-label="Закрыть окно">Закрыть</button>
   </section>
 
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript">
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
     // закрываем модалки
     $('.modal-close').click(function() {
       $('.modal').removeClass('visible');

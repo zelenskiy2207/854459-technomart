@@ -113,8 +113,8 @@ ul.listnone {
 .technomart-logo img {
   width: 111px;
   height: 18px;
-  padding-top: 13px;
-  padding-left: 55px;
+  margin-top: 13px;
+  margin-left: 55px;
 }
 
 .search {
@@ -263,7 +263,6 @@ ul.listnone {
 }
 
 .header-contacts .header-contacts-phone {
-  display: block;
   font-size: 21px;
   line-height: 21px;
   color: #ee3643;
@@ -620,7 +619,6 @@ h1.page-header {
   width: 22px;
   height: 40px;
   cursor: pointer;
-  tab-index: 1;
 }
 
 .slider-button-back-label::before {
@@ -660,7 +658,6 @@ h1.page-header {
   border: 2px solid #ffffff;
   background: #ffffff;
   border-radius: 50%;
-  tab-index: 1;
 }
 
 .slider-radio-1:focus ~ .slider-switchers label[for="slider-switcher-1"] {
@@ -1207,13 +1204,20 @@ h1.page-header {
 .footer-navigation {
   display: flex;
   justify-content: space-between;
-  align-content: flex-end;
   flex-wrap: wrap;
 }
 
 .footer-navigation .technomart-logo {
+  display: block;
   width: 220px;
   min-height: 63px;
+}
+
+.footer-navigation .technomart-logo img {
+  width: 138px;
+  height: 21px;
+  margin-top: 22px;
+  margin-left: 42px;
 }
 
 .contacts-wrapper {
@@ -1224,20 +1228,16 @@ h1.page-header {
   margin: 0;
 }
 
-.footer-navigation .technomart-logo img {
-  width: 138px;
-  height: 21px;
-  padding-top: 22px;
-  padding-left: 42px;
-}
-
 .footer-navigation-list {
   display: flex;
+  padding: 0;
   min-width: 550px;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: flex-end;
   margin: 0;
   margin-top: 39px;
+  margin-left: 170px;
 }
 
 .footer-navigation a {
