@@ -968,6 +968,10 @@ h1.page-header {
   opacity: 0.3;
 }
 
+.map-contacts {
+  position: relative;
+}
+
 .map-contacts img {
   width: 300px;
   height: 158px;
@@ -1939,11 +1943,11 @@ h1.page-header {
 }
 
 .modal-map {
-  width: 1736px;
-  height: 779px;
-  top: 50px;
-  left: 50%;
-  margin-left: -868px;
+  position: absolute;
+  width: 940px;
+  height: 448px;
+  top: 30px;
+  right: 0;
 }
 
 .visible {
