@@ -6,7 +6,7 @@
   <title>Каталог - HTML Academy: Техномарт</title>
   <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -169,7 +169,7 @@
             <ul class="catalog-list listnone">
               <li class="catalog-item">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-3000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+                  <img src="img/catalog/b3000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 3000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -183,7 +183,7 @@
               </li>
               <li class="catalog-item">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+                  <img src="img/catalog/b6000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 6000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -197,7 +197,7 @@
               </li>
               <li class="catalog-item new">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-2000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+                  <img src="img/catalog/b2000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 2000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -211,7 +211,7 @@
               </li>
               <li class="catalog-item">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-3000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+                  <img src="img/catalog/b3000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 3000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -225,7 +225,7 @@
               </li>
               <li class="catalog-item new">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+                  <img src="img/catalog/b6000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 6000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -239,7 +239,7 @@
               </li>
               <li class="catalog-item">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-2000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+                  <img src="img/catalog/b2000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 2000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -253,7 +253,7 @@
               </li>
               <li class="catalog-item new">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-3000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+                  <img src="img/catalog/b3000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 3000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -267,7 +267,7 @@
               </li>
               <li class="catalog-item">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+                  <img src="img/catalog/b6000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 6000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -281,7 +281,7 @@
               </li>
               <li class="catalog-item">
                 <p class="catalog-item-image">
-                  <img src="img/bosh-bfg-2000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+                  <img src="img/catalog/b2000.jpg" width="218" height="167" alt="Перфоратор BOSCH BFG 2000">
                 </p>
                 <p class="catalog-item-actions">
                   <a class="catalog-item-buy catalog-button" href="#">Купить</a>
@@ -323,7 +323,7 @@
     <div class="footer-navigation-wrapper">
       <section class="footer-navigation container">
         <h2 class="visually-hidden">Навигация</h2>
-        <a class="technomart-logo" href="index.html">
+        <a class="technomart-logo footer-technomart-logo" href="index.html">
           <img src="img/logo.svg" width="138" height="21" alt="Логотип компании «Техномарт»" aria-label="Логотип компании «Техномарт»">
         </a>
 
@@ -402,18 +402,6 @@
     <button class="modal-close" type="button" aria-label="Закрыть окно">Закрыть</button>
   </section>
 
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script>
-    // закрываем модалки
-    $('.modal-close').click(function() {
-      $('.modal').hide();
-    });
-
-    // открываем добавлен в корзину
-    $('.catalog-item-buy').click(function (e) {
-      e.preventDefault();
-      $('.modal-added-to-cart').show();
-    });
-  </script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>
