@@ -11,6 +11,10 @@ body {
   background-color: #ffffff;
 }
 
+.map-frame {
+  border: 0;
+}
+
 a {
   text-decoration: none;
 }
