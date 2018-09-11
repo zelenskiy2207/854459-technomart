@@ -1734,10 +1734,6 @@ h1.page-header {
   cursor: pointer;
 }
 
-.filter-input:focus + label::before {
-
-}
-
 .filter-input-radio + label::before,
 .filter-input-checkbox + label::before {
   content: "";
